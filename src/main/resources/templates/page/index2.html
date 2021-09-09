@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+    <!--<link rel="stylesheet" th:href="@{/css/page/home.css}" >-->
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+    <!--<script th:src="@{/js/page/home.js}"></script>-->
+</th:block>
+
+<div layout:fragment="content">
+
+    <section class="section">
+        <div class="youtube_content">
+            <p class="youtube_clip">
+                <iframe src="https://www.youtube.com/embed/RErA-0BfG10"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </p>
+
+            <p class="youtube_title">
+                향후 5년간 대한민국에서 상승률이 가장 높을 곳은 여기 (YOUTUBE 채널 모두의부동산 2021.01.15)
+            </p>
+        </div>
+    </section>
+
+    <!--<div class="menu_bg"></div>
+    <div class="sidebar_menu">
+        <div class="close_btn" id="close_btn">
+            <a href="#">
+                <i class="fas fa-times" id="close" ></i>
+            </a>
+        </div>
+        <ul class="menu_wrap">
+            <li><a href="#">소개</a></li>
+            <li><a href="#">상담안내</a></li>
+            <li><a href="#">상담후기</a></li>
+            <li><a href="#">문의</a></li>
+            <li><a href="#">로그인</a></li>
+        </ul>
+    </div>-->
+</div>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+
+    <th:block layout:fragment="script">
+        <script th:src="@{/static/js/consulting.js}"></script>
+    </th:block>
+
+    <div layout:fragment="content" class="bodyFrame">
+        <section class="section">
+            <div class="contentFrame">
+                <span class="txt_5 block blueGrey bold">상담안내</span>
+                <span class="txt_3 block grey">아래 내용을 확인하고, 상담 종류와 일정을 선택하여 상담 예약을 진행해주세요.</span>
+
+                <!-- 1. 상담 종류 선택 -->
+                <div class="title_rect"><span class="txt_4 block white bold">1. 상담 종류 선택</span></div>
+                <ul>
+                    <li>
+                        <input type="radio" id="consultType_Phone" name="consultType">
+                        <label for="consultType_Phone">전화상담</label>
+                        <div class="check"></div>
+                    </li>
+                    <li class="imp_explain" id="consultTypePrice_Phone" style="display:none;">
+                        <span class="block pb10">
+                            <span class="txt_3 grey">* 상담 시간</span>
+                            <span class="txt_3 blueGrey bold pl50">1시간</span>
+                        </span>
+                        <span class="block pb10">
+                            <span class="txt_3 grey">* 상담 금액</span>
+                            <span class="txt_3 blueGrey bold pl50">700,000원</span>
+                        </span>
+                    </li>
+                    <li class="explain mb10 pb20" id="consultTypeExplain_Phone" style="display:none;">
+                        <span class="txt_2 block grey">
+                            예약한 시간에 상담사가 직접 의뢰인에게 전화해 상담을 진행합니다.<br>
+                            예약 시 작성한 상담 글을 상담사가 사전 검토합니다.<br>
+                            상담이 끝나면 상담의 핵심내용을 상담사가 요약하여 제공합니다.<br>
+                            (상담 결과는 필수항목이 아닙니다.)<br>
+                            상담 후 추가적인 요청에 의한 서비스는 추가 상담료가 발생할 수 있습니다.<br>
+                        </span>
+                    </li>
+                    <li>
+                        <input type="radio" id="consultType_Visit" name="consultType">
+                        <label for="consultType_Visit">대면상담</label>
+                        <div class="check"><div class="inside"></div></div>
+                    </li>
+                    <li class="imp_explain" id="consultTypePrice_Visit" style="display:none;">
+                        <span class="block pb10">
+                            <span class="txt_3 grey">* 상담 시간</span>
+                            <span class="txt_3 blueGrey bold pl50">2시간</span>
+                        </span>
+                        <span class="block pb10">
+                            <span class="txt_3 grey">* 상담 금액</span>
+                            <span class="txt_3 blueGrey bold pl50">1,000,000원</span>
+                        </span>
+                    </li>
+                    <li class="explain mb10 pb20" id="consultTypeExplain_Visit" style="display:none;">
+                        <span class="txt_2 block grey">
+                            예약한 시간에 상담사의 사무실 또는 약속한 장소에서 상담을 진행합니다.<br>
+                            예약 시 작성한 상담 글을 상담사가 사전 검토합니다.<br>
+                            상담이 끝나면 상담의 핵심내용을 상담사가 요약하여 제공합니다.<br>
+                            (상담 결과는 필수항목이 아닙니다.)<br>
+                            상담 후 추가적인 요청에 의한 서비스는 추가 상담료가 발생할 수 있습니다.<br>
+                        </span>
+                    </li>
+                </ul>
+
+                <!-- 2. 날짜 선택 -->
+                <div class="title_rect"><span class="txt_4 block white bold">2. 날짜 선택</span></div>
+                <div class="select_date">
+                    <span class="each_date">
+                        <div class="date">04</div>
+                        <div class="dayWeek">토요일</div>
+                    </span>
+                    <span class="each_date">
+                        <div class="date">05</div>
+                        <div class="dayWeek">일요일</div>
+                    </span>
+                    <span class="each_date">
+                        <div class="date">06</div>
+                        <div class="dayWeek">월요일</div>
+                    </span>
+                    <span class="each_date">
+                        <div class="date">07</div>
+                        <div class="dayWeek">화요일</div>
+                    </span>
+                    <span class="each_date">
+                        <div class="date">08</div>
+                        <div class="dayWeek">수요일</div>
+                    </span>
+                    <span class="each_date">
+                        <div class="date">09</div>
+                        <div class="dayWeek">목요일</div>
+                    </span>
+                    <span class="each_date">
+                        <div class="date">10</div>
+                        <div class="dayWeek">금요일</div>
+                    </span>
+                </div>
+
+                <!-- 3. 시간 선택 -->
+                <div class="title_rect"><span class="txt_4 block white bold">3. 시간 선택</span></div>
+                <div class="select_time">
+                    <span class="each_time">11:00</span>
+                    <span class="each_time">12:00</span>
+                    <span class="each_time">13:00</span>
+                    <span class="each_time">14:00</span>
+                    <span class="each_time">15:00</span>
+                    <span class="each_time">16:00</span>
+                    <span class="each_time">17:00</span>
+                </div>
+                <div class="select_time">
+                    <span class="each_time">18:00</span>
+                    <span class="each_time">19:00</span>
+                    <span class="each_time">20:00</span>
+                    <span class="each_time">21:00</span>
+                    <span class="each_time">22:00</span>
+                    <span class="each_time">23:00</span>
+                    <span class="each_time">24:00</span>
+                </div>
+
+                <!-- 4. 상담자 정보 -->
+                <div class="title_rect"><span class="txt_4 block white bold">4. 상담자 정보</span></div>
+                <div class="consultant_info">
+                    <table>
+                        <colgroup>
+                            <col style="width:20%">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tr>
+                            <td>상담인</td>
+                            <td>김정태 대표</td>
+                        </tr>
+                        <tr>
+                            <td>사무소</td>
+                            <td>모두의부동산</td>
+                        </tr>
+                        <tr>
+                            <td>주소</td>
+                            <td>경기도 성남시 분당구 판교역로 145 알파리움 10층 모두의부동산</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <!-- 5. 예약취소 및 환불규정 -->
+                <div class="title_rect"><span class="txt_4 block white bold">5. 예약취소 및 환불규정</span></div>
+                <div class="cancel_refund">
+                    예약취소는 상담 1시간 전까지 <u>마이페이지</u>에서 가능합니다.(이후 취소 및 환불 불가)<br>
+                    예약날짜 및 시간변경은 전화상담 1시간 전까지만 마이페이지에서 변경 가능합니다.<br>
+                    상담사 사정으로 상담을 하지 못한 경우에는 100% 환불해드립니다.
+                </div>
+            </div>
+        </section>
+    </div>
+</html>
