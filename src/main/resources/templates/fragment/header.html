@@ -3,18 +3,22 @@
 
     <!--headerFragment 선언-->
     <nav th:fragment="headerFragment" class="headerbar">
-        <div class="headerFrame">
-            <div class="navbar_logo">
-                <!--<i class="fab fa-accusoft"></i>-->
-                <img th:src="@{/static/images/moboo_logo.jpeg}"></img>
-                <a href="/moveMain">모두의부동산</a>
-            </div>
+        <div>
 
+        </div>
+        <div class="headerbar_contents">
+            <ul class="headerbar_menu">
+                <li id="header_menu1"><a href="/moveLogin">로그인</a></li>
+                <li class="split_bar"> | </li>
+                <li id="header_menu2"><a href="/moveJoin">회원가입</a></li>
+            </ul>
+        </div>
+        <!--<div class="headerFrame">
             <a href="#" class="navbar_toggleBtn">
                 <i class="fas fa-bars" id="openBtn"></i>
                 <i class="fas fa-times" id="closeBtn" ></i>
             </a>
-        </div>
+        </div>-->
     </nav>
 
 </html>

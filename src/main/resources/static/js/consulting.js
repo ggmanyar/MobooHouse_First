@@ -21,11 +21,17 @@ $(document).ready(function(){
            $("#consultTypeExplain_Visit").css("display", "none");
            $("#consultTypePrice_Phone").css("display", "block");
            $("#consultTypeExplain_Phone").css("display", "block");
+           $("#visit_Detail").css("visibility", "hidden");
+           $("#visit_Detail option:eq(0)").prop("selected", "true");
+           $("#phone_Detail").css("visibility", "visible");
        }else{
            $("#consultTypePrice_Phone").css("display", "none");
            $("#consultTypeExplain_Phone").css("display", "none");
            $("#consultTypePrice_Visit").css("display", "block");
            $("#consultTypeExplain_Visit").css("display", "block");
+           $("#visit_Detail").css("visibility", "visible");
+           $("#phone_Detail").css("visibility", "hidden");
+           $("#phone_Detail option:eq(0)").prop("selected", "true");
        }
     });
 
@@ -57,6 +63,7 @@ function init() {
     $("#consultTypeExplain_Visit").css("display", "none");
     $("#consultTypePrice_Phone").css("display", "block");
     $("#consultTypeExplain_Phone").css("display", "block");
+    $("#visit_Detail").css("visibility", "hidden");
 
     // 2.날짜 선택 초기화
     $('.date[date-index=3]').addClass('clicked');
