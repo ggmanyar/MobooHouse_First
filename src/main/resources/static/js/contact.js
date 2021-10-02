@@ -32,3 +32,8 @@ function side4_On() {
 function side4_Off() {
     $("#side_menu4").attr("class", "");
 }
+
+function charCount() {
+    var count = $("#textarea").val().length;
+    $("#contactTextCount").html(count + "/2000");
+}

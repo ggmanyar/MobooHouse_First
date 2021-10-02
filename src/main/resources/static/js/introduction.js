@@ -13,6 +13,8 @@ $(document).ready(function(){
     }, function (){
         gnb1_On();
     });
+
+
 });
 
 function gnb1_On() {
