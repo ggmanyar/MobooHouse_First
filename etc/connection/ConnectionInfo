@@ -1,0 +1,22 @@
+[DB 접속정보] - MySql
+ip:[18.219.73.7]
+port:[3306]
+id:[ggmanyar]
+pw:[1q2w3e4r%%]
+
+[AWS 접속정보]
+주소:[https://console.aws.amazon.com/?nc2=h_m_mc]
+->루트사용자
+id:[ggmanyar@naver.com]
+pw:[1q2w3e4r%%]
+
+[서버접속정보]
+HpstName[ubuntu@ec2-13-124-121-132.ap-northeast-2.compute.amazonaws.com]
+port[22]
+putty접속시
+ggmanyar_seoul.pem 및 ggmanyar.ppk 설정필요
+접속후 sudo su
+
+
+
+
