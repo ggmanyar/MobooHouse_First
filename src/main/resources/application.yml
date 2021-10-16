@@ -14,5 +14,5 @@ spring:
     cache: false
   mvc:
     static-path-pattern: "/static/**"
-mybatis: 
+mybatis:
   mapper-locations: classpath:mapper/**.xml

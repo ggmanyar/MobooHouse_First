@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'sansPro';
-    src: url('/static/font/SourceSansPro-Regular.otf') format('truetype');
+    /*src: url('/static/font/SourceSansPro-Regular.otf') format('truetype');*/
+    src: url('/static/font/NanumPen.ttf') format('truetype');
 }
 
 
