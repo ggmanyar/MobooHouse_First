@@ -1,3 +1,6 @@
+[모부 도메인 접속정보]
+ubuntu@ec2-13-124-121-132.ap-northeast-2.compute.amazonaws.com
+
 [DB 접속정보] - MySql
 ip:[18.219.73.7]
 port:[3306]
@@ -10,7 +13,7 @@ pw:[1q2w3e4r%%]
 id:[ggmanyar@naver.com]
 pw:[1q2w3e4r%%]
 
-[서버접속정보]
+[서버접속정보 FTP, SSH]
 HpstName[ubuntu@ec2-13-124-121-132.ap-northeast-2.compute.amazonaws.com]
 port[22]
 putty접속시
