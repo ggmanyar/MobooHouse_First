@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'sansPro';
+    src: url('/static/font/SourceSansPro-Regular.otf') format('truetype');
+}
+
+
+
 :root {
     --text-light-color: #f0f4f5;
     --text-dark-color: #333333;
@@ -37,7 +44,8 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'sansPro';
     /*font-family: 'Nanum Gothic Coding', monospace;*/;
 }
 
@@ -93,7 +101,8 @@ select {
     width: 200px;
     padding: 5px;
     border: 1px solid #999;
-    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'sansPro';
     background: url('/static/images/arrow_down.png') no-repeat 97% 50%/15px auto;
     border-radius: 3px;
     -webkit-appearance: none;
@@ -113,7 +122,8 @@ button {
     color: white;
     margin: 0;
     padding: 0.5rem 1rem;
-    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'sansPro';
     font-size: 1rem;
     font-weight: 400;
     font-color:white;
@@ -899,7 +909,8 @@ textarea {
     border: none;
     outline: none;
     resize: none;
-    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'sansPro';
 }
 .textarea_style {
     margin-top:30px;
