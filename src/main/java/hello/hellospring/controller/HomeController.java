@@ -41,4 +41,9 @@ public class HomeController {
     public String moveLogin(){
         return "page/login";
     }
+
+    @GetMapping("/moveJoin")
+    public String moveJoin(){
+        return "page/join";
+    }
 }

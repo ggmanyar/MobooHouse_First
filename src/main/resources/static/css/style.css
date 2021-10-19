@@ -1,80 +1,102 @@
+/* noto-sans-kr-100 - latin_korean */
 @font-face {
-    font-family: 'sansPro';
-    /*src: url('/static/font/SourceSansPro-Regular.otf') format('truetype');*/
-    src: url('/static/font/SourceSansPro-Regular.ttf') format('truetype');
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: local(''),
+    url('/static/font/noto-sans-kr-v21-latin_korean-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/static/font/noto-sans-kr-v21-latin_korean-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-kr-300 - latin_korean */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+    url('/static/font/noto-sans-kr-v21-latin_korean-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/static/font/noto-sans-kr-v21-latin_korean-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-kr-regular - latin_korean */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('/static/font/noto-sans-kr-v21-latin_korean-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/static/font/noto-sans-kr-v21-latin_korean-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-kr-500 - latin_korean */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+    url('/static/font/noto-sans-kr-v21-latin_korean-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/static/font/noto-sans-kr-v21-latin_korean-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-kr-700 - latin_korean */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+    url('/static/font/noto-sans-kr-v21-latin_korean-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/static/font/noto-sans-kr-v21-latin_korean-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-kr-900 - latin_korean */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+    url('/static/font/noto-sans-kr-v21-latin_korean-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/static/font/noto-sans-kr-v21-latin_korean-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 
 
 :root {
+    /* IE에서 적용되지 않아 현재 미사용 */
     --text-light-color: #f0f4f5;
     --text-dark-color: #333333;
-    --text-bluedark-color: #263343;
     --text-grey-color: #868686;
     --text-middlegrey-color: #dedede;
     --text-darkgrey-color:#585858;
-    /*--background-color: #263343;*/
-    --footer-color: #e1e1e1;
     --border-color: #8c8c8c;
-    --sidebar-color: #263343;
-    /*--accent-color: #d49466;*/
     --accent-color:#2982C8;
     --accent-imp-color: #42A4EA;
     --normal-color:#868686;
     --normal-imp-color:#535353;
-    /*--rect-color: #263343;*/
     --rect-color: #4B4B4B;
-
     --button-color-kakao: #FAE101;
     --button-color-naver: #00BF17;
     --button-color-google: #F2F2F2;
-
     --default-background-color: #F6FBF6;
-    /*--default-background-color: grey;*/
 }
 
 html,
 body {
     height: 100%;
-    background: var(--default-background-color);
-    /*background: url('/static/images/moboo_Background.jpeg') no-repeat center center/cover, rgba(0, 0, 0, 0.6);
-    background-blend-mode: multiply;*/
+    background: #F6FBF6;
 }
 
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    /*font-family: 'Source Sans Pro', sans-serif;*/
-    font-family: 'sansPro';
-    /*font-family: 'Nanum Gothic Coding', monospace;*/;
+    font-family: 'Noto Sans KR';
 }
 
 section {
     flex: 1;
-    /*padding: 50px 30px;*/
     padding-top: 20px;
 }
 
-/*footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height : auto;
-    width: 100vw;
-    padding-top: 40px;
-    color: var(--text-color);
-}*/
-
 footer {
     height: auto;
-    color: var(--text-dark-color);
-    /*background: var(--default-background-color);*/
+    color: #333333;
     z-index: 2;
     margin-top: auto;
-    /*position:absolute;
-    bottom: 0px;*/
     width: 100%;
 }
 
@@ -95,15 +117,14 @@ footer .footer-bottom {
 
 a {
     text-decoration: none;
-    color: var(--text-dark-color);
+    color: #333333;
 }
 
 select {
     width: 200px;
     padding: 5px;
     border: 1px solid #999;
-    /*font-family: 'Source Sans Pro', sans-serif;*/
-    font-family: 'sansPro';
+    font-family: 'Noto Sans KR';
     background: url('/static/images/arrow_down.png') no-repeat 97% 50%/15px auto;
     border-radius: 3px;
     -webkit-appearance: none;
@@ -119,12 +140,11 @@ button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: var(--button-bg-color);
+    background: #2982C8;
     color: white;
     margin: 0;
     padding: 0.5rem 1rem;
-    /*font-family: 'Source Sans Pro', sans-serif;*/
-    font-family: 'sansPro';
+    font-family: 'Noto Sans KR';
     font-size: 1rem;
     font-weight: 400;
     font-color:white;
@@ -147,8 +167,8 @@ button.mini {
     padding: 0 10px;
 }
 button.important {
-    --button-bg-color: var(--accent-color);
-    --button-hover-bg-color: var(--accent-imp-color);
+    --button-bg-color: #2982C8;
+    --button-hover-bg-color: #42A4EA;
 }
 button.important.big {
     width: 70%;
@@ -156,7 +176,7 @@ button.important.big {
     margin: 30px 0;
 }
 button.important.big.kakao {
-    background-color:var(--button-color-kakao);
+    background-color:#FAE101;
     background-image: url('/static/images/icon_kakao.png');
     background-repeat: no-repeat;
     background-position: 1px;
@@ -166,7 +186,7 @@ button.important.big.kakao {
     margin: 10px;
 }
 button.important.big.naver {
-    background-color:var(--button-color-naver);
+    background-color:#00BF17;
     background-image: url('/static/images/icon_naver.png');
     background-repeat: no-repeat;
     background-position: 1px;
@@ -176,7 +196,7 @@ button.important.big.naver {
     margin: 10px;
 }
 button.important.big.google {
-    background-color:var(--button-color-google);
+    background-color:#F2F2F2;
     background-image: url('/static/images/icon_google.png');
     background-repeat: no-repeat;
     background-position: 10px;
@@ -186,11 +206,15 @@ button.important.big.google {
     margin: 10px;
 }
 button.normal {
-    --button-bg-color: var(--normal-color);
-    --button-hover-bg-color: var(--normal-imp-color);
+    --button-bg-color: #868686;
+    --button-hover-bg-color: #535353;
 }
 button:hover {
-    background: var(--button-hover-bg-color);
+    background: #42A4EA;
+    outline: 0;
+}
+button.normal:hover {
+    background: #535353;
     outline: 0;
 }
 button:disabled {
@@ -229,34 +253,6 @@ input[type="checkbox"]:checked + label span {
 
 
 
-
-
-
-
-.youtube_content {
-    /*position: relative;
-    top: 50px;*/
-    align-items: center;
-    display: block;
-}
-
-.youtube_content .youtube_clip {
-    display: block;
-    text-align: center;
-    /*margin: 50px;*/
-}
-
-.youtube_clip iframe {
-    width: 650px;
-    height: 380px;
-}
-
-.youtube_title {
-    display: block;
-    text-align: center;
-    margin: 50px;
-}
-
 .bg-shadow {
     position: fixed;
     top: 0;
@@ -273,12 +269,8 @@ input[type="checkbox"]:checked + label span {
     align-items: center;
     position: relative;
     z-index: 2;
-    /*background-color: var(--default-background-color);*/
-    /*padding: 0px 12px;
-    margin-left: auto;
-    margin-right: auto;*/
     padding: 3px 12px;
-    border-bottom: solid 1px var(--border-color);
+    border-bottom: solid 1px #8c8c8c;
 }
 
 .headerbar .headerbar_contents {
@@ -290,7 +282,6 @@ input[type="checkbox"]:checked + label span {
 
 .headerbar .headerbar_contents .headerbar_menu {
     position: relative;
-    /*top: 17px;*/
     display: flex;
     list-style: none;
     padding-left: 0;
@@ -314,15 +305,12 @@ input[type="checkbox"]:checked + label span {
 }
 
 .navbar {
-    /*display: flex;
-    justify-content: space-around;*/
     align-items: center;
     position: relative;
     z-index: 2;
-    /*background-color: var(--background-color);*/
     background-color: white;
     padding: 5px 0;
-    border-bottom: solid 1px var(--border-color);
+    border-bottom: solid 1px #8c8c8c;
 }
 
 .navbar_contents {
@@ -333,26 +321,12 @@ input[type="checkbox"]:checked + label span {
 }
 
 .navbar_logo {
-    /*font-size: 27px;
-    font-weight: bold;
-    color :var(--text-dark-color);*/
     padding-top: 10px;
 }
 
 .navbar_logo img {
     width: 150px;
-    /*border-radius: 70%;*/
 }
-
-/*.navbar_logo a {
-    position: absolute;
-    top:25px;
-    padding-left: 10px;
-}
-
-.navbar_logo i {
-    color: var(--accent-color);
-}*/
 
 .navbar_menu {
     position: relative;
@@ -372,7 +346,7 @@ input[type="checkbox"]:checked + label span {
 .navbar_menu li:after {
     display: block;
     content: '';
-    border-bottom: solid 5px var(--accent-color);
+    border-bottom: solid 5px #2982C8;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     height: 25%;
@@ -380,32 +354,27 @@ input[type="checkbox"]:checked + label span {
 
 .navbar_menu li:hover:after {
     transform: scaleX(2);
-    color: var(--accent-color);
+    color: #2982C8;
 }
 
 .navbar_menu li.on:after {
     display: block;
     content: '';
-    border-bottom: solid 5px var(--accent-color);
+    border-bottom: solid 5px #2982C8;
     transform: scaleX(2);
     transition: transform 250ms ease-in-out;
     height: 25%;
 }
 
 .navbar_menu li > a:hover {
-    color: var(--accent-color);
+    color: #2982C8;
     font-weight: bold;
 }
 
 .navbar_menu li > a.on {
-    color: var(--accent-color);
+    color: #2982C8;
     font-weight: bold;
 }
-
-/*.navbar_menu li:hover {
-    background-color: var(--accent-color);
-    border-radius: 4px;
-}*/
 
 .navbar_icons {
     list-style: none;
@@ -424,15 +393,8 @@ input[type="checkbox"]:checked + label span {
     top: 10px;
     right: 32px;
     font-size: 24px;
-    color: var(--accent-color);
+    color: #2982C8;
 }
-
-/* 삭제 예정 */
-/*.introduction, .consulting, .review, .contact, .login {
-    text-align: center;
-    width :100%;
-    color: var(--text-dark-color);
-}*/
 
 .bodyFrame {
     margin-left: auto;
@@ -444,7 +406,7 @@ section .contentFrame {
     margin: auto;
     align-items: center;
     position: relative;
-    border: solid 1px var(--border-color);
+    border: solid 1px #8c8c8c;
     min-height: 770px;
     background-color: white;
 }
@@ -542,7 +504,7 @@ section .contentFrame .contact .contact_contents_cell{
     text-align: left;
     font-size:13px;
     font-weight: 300;
-    color: var(--text-grey-color);
+    color: #868686;
 }
 .contents_small_title {
     text-align: left;
@@ -554,7 +516,7 @@ section .contentFrame .contact .contact_contents_cell{
     text-align: left;
     font-size:13px;
     font-weight: 300;
-    color: var(--text-grey-color);
+    color: #868686;
 }
 .contents_center {
     text-align: center;
@@ -572,18 +534,18 @@ section .contentFrame .contact .contact_contents_cell{
     font-size:16px;
     font-weight: 500;
     padding: 20px 20px;
-    color: var(--text-grey-color);
+    color: #868686;
 }
 .introduction_text .signature {
     font-size:16px;
     font-weight: 500;
     padding: 0 20px;
-    color: var(--text-grey-color);
+    color: #868686;
 }
 .introduction_text .signature .imp{
     font-size:20px;
     font-weight: 800;
-    color: var(--text-darkgrey-color);
+    color: #585858;
     padding-left: 5px;
 }
 
@@ -597,8 +559,6 @@ section .contentFrame .contact .contact_contents_cell{
 .login_save label{
     padding-right: 15px;
 }
-
-
 
 
 /* contentFrame 내 라디오 디자인 start */
@@ -618,15 +578,13 @@ section .contentFrame .contact .contact_contents_cell{
     position: relative;
     float: left;
     width: 100%;
-    /*height: auto;*/
-    /*border-bottom: 1px solid #333;*/
 }
 .contents_left ul li.select_type {
     display: block;
     padding-bottom: 10px;
 }
 .contents_left ul li.imp_explain{
-    color: var(--text-grey-color);
+    color: #868686;
     padding-left: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -635,23 +593,19 @@ section .contentFrame .contact .contact_contents_cell{
 .contents_left ul li.explain{
     font-size: 13px;
     font-weight: 200;
-    color: var(--text-grey-color);
+    color: #868686;
     padding-left: 30px;
     line-height:18px;
     width:90%;
-    /*padding-top: 10px;
-    padding-bottom: 10px;*/
 }
 .contents_left ul li input[type=radio]{
     position: absolute;
     visibility: hidden;
 }
 .contents_left ul li label{
-    /*display: block;*/
     position: relative;
     font-weight: 600;
     font-size: 16px;
-    /*padding: 10px 10px 10px 60px;*/
     padding: 0 50px;
     margin: 10px auto;
     height: 30px;
@@ -660,7 +614,7 @@ section .contentFrame .contact .contact_contents_cell{
     -webkit-transition: all 0.25s linear;
 }
 .contents_left ul li:hover label{
-    color: var(--accent-color);
+    color: #2982C8;
 }
 .contents_left ul li .check{
     display: block;
@@ -676,7 +630,7 @@ section .contentFrame .contact .contact_contents_cell{
     -webkit-transition: border .25s linear;
 }
 .contents_left ul li:hover .check {
-    border: 4px solid var(--accent-color);
+    border: 4px solid #2982C8;
 }
 .contents_left ul li .check::before {
     display: block;
@@ -692,13 +646,13 @@ section .contentFrame .contact .contact_contents_cell{
     -webkit-transition: background 0.25s linear;
 }
 .contents_left input[type=radio]:checked ~ .check {
-    border: 4px solid var(--accent-color);
+    border: 4px solid #2982C8;
 }
 .contents_left input[type=radio]:checked ~ .check::before{
-    background: var(--accent-color);
+    background: #2982C8;
 }
 .contents_left input[type=radio]:checked ~ label{
-    color: var(--accent-color);
+    color: #2982C8;
 }
 /* contentFrame 내 라디오 디자인 end */
 
@@ -716,7 +670,6 @@ section .contentFrame .contact .contact_contents_cell{
     height: 1px;
 }
 
-/*h2 { color: var(--text-bluedark-color); }*/
 
 .txt_1 { font-size: 12px; }
 .txt_2 { font-size: 14px; }
@@ -732,7 +685,7 @@ section .contentFrame .contact .contact_contents_cell{
 .block { display: block; }
 
 .title_rect {
-    background-color: var(--rect-color);
+    background-color: #4B4B4B;
     margin-top: 30px;
     margin-bottom: 10px;
     padding-left: 15px;
@@ -760,11 +713,11 @@ section .contentFrame .contact .contact_contents_cell{
     padding-bottom: 9px;
     font-size: 20px;
     font-weight: 700;
-    color: var(--text-darkgrey-color);
+    color: #585858;
 }
 .select_date .each_date .date.clicked {
     color: white;
-    background-color: var(--accent-color);
+    background-color: #2982C8;
     border-radius: 100%;
 }
 .select_date .each_date .date.disabled {
@@ -774,7 +727,7 @@ section .contentFrame .contact .contact_contents_cell{
     padding-top: 10px;
     font-size: 17px;
     font-weight: 300;
-    color: var(--text-grey-color);
+    color: #868686;
 }
 
 
@@ -792,17 +745,17 @@ section .contentFrame .contact .contact_contents_cell{
     text-align: center;
     cursor: pointer;
     margin: 5px;
-    background-color: var(--text-middlegrey-color);
-    color: var(--text-darkgrey-color);
+    background-color: #dedede;
+    color: #585858;
     padding: 23px 16px;
     font-size: 17px;
 }
 .select_time .select_time_row .each_time.clicked{
-    background-color: var(--accent-color);
+    background-color: #2982C8;
     color: white;
 }
 .select_time .select_time_row .each_time.disabled{
-    background-color: var(--text-light-color);
+    background-color: #f0f4f5;
     color: lightgrey;
 }
 
@@ -811,7 +764,7 @@ section .contentFrame .contact .contact_contents_cell{
     padding: 10px 20px;
     font-size: 15px;
     font-weight: 200;
-    color: var(--text-grey-color);
+    color: #868686;
 }
 
 .cancel_refund {
@@ -819,10 +772,10 @@ section .contentFrame .contact .contact_contents_cell{
     font-size: 14px;
     font-weight: 300;
     line-height:22px;
-    color: var(--text-grey-color);
+    color: #868686;
 }
 .cancel_refund .imp {
-    color:var(--accent-color);
+    color:#2982C8;
     font-weight: 500;
 }
 .review_contents {
@@ -830,7 +783,7 @@ section .contentFrame .contact .contact_contents_cell{
     font-size: 14px;
     font-weight: 300;
     line-height:22px;
-    color: var(--text-grey-color);
+    color: #868686;
 }
 
 
@@ -850,8 +803,8 @@ section .contentFrame .contact .contact_contents_cell{
 .form input {
     width: 100%;
     height: 100%;
-    color: var(--text-darkgrey-color);
-    padding-top: 10px;
+    color: #585858;
+    padding-top: 20px;
     padding-left: 5px;
     border: none;
     outline: none;
@@ -876,7 +829,7 @@ section .contentFrame .contact .contact_contents_cell{
     bottom: -1px;
     height: 100%;
     width: 100%;
-    border-bottom: 1px solid var(--accent-color);
+    border-bottom: 1px solid #2982C8;
     transform: translateX(-100%);
     transition: transform 0.0s ease;
 }
@@ -893,7 +846,7 @@ section .contentFrame .contact .contact_contents_cell{
 .form input:valid + .label-name .content-name {
     transform: translateY(-150%);
     font-size: 10px;
-    color: var(--accent-color);
+    color: #2982C8;
 }
 .form input:focus + .label-name::after,
 .form input:valid + .label-name::after {
@@ -910,8 +863,7 @@ textarea {
     border: none;
     outline: none;
     resize: none;
-    /*font-family: 'Source Sans Pro', sans-serif;*/
-    font-family: 'sansPro';
+    font-family: 'Noto Sans KR';
 }
 .textarea_style {
     margin-top:30px;
@@ -924,13 +876,13 @@ textarea {
     -moz-box-shadow: 0px 0px 10px 1px #EBF6FF;
     -webkit-box-shadow: 0px 0px 10px 1px #EBF6FF;
     box-shadow: 0px 0px 10px 1px #EBF6FF;
-    border: 1px solid var(--accent-color);
+    border: 1px solid #2982C8;
 }
 .textarea_style:focus {
     -moz-box-shadow: 0px 0px 5px 1px #EBF6FF;
     -webkit-box-shadow: 0px 0px 5px 1px #EBF6FF;
     box-shadow: 0px 0px 5px 1px #EBF6FF;
-    border: 1px solid var(--accent-color);
+    border: 1px solid #2982C8;
 }
 textarea::-webkit-scrollbar {
     width: 3px;
@@ -939,7 +891,7 @@ textarea::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 10px #BDDAE0;
 }
 textarea::-webkit-scrollbar-thumb {
-    background-color: var(--accent-color);
+    background-color: #2982C8;
 }
 span.textarea_count {
     float: right;
@@ -947,7 +899,7 @@ span.textarea_count {
     color: grey;
 }
 .textarea {
-    color: var(--text-darkgrey-color);
+    color: #585858;
 }
 .textarea::placeholder {
     color: lightgrey;
@@ -990,7 +942,7 @@ span.textarea_count {
 .pr40 { padding-right: 40px; }
 .pr50 { padding-right: 50px; }
 
-.underline { border-bottom: 1px solid var(--border-color); }
+.underline { border-bottom: 1px solid #8c8c8c; }
 
 
 
@@ -1017,7 +969,7 @@ span.textarea_count {
     .txt_5 { font-size: 21px; }
 
     .headerbar {
-        border-bottom: solid 1px var(--border-color);
+        border-bottom: solid 1px #8c8c8c;
     }
 
     .navbar {
@@ -1050,7 +1002,7 @@ span.textarea_count {
     }
 
     .navbar_menu li:hover {
-        background-color: var(--accent-color);
+        background-color: #2982C8;
         border-radius: 4px;
     }
 
@@ -1089,7 +1041,6 @@ span.textarea_count {
         display: none;
         width: 50%;
         height: 100%;
-        /*background: var(--sidebar-color);*/
         background-color: white;
         position: absolute;
         top:0;
@@ -1105,7 +1056,7 @@ span.textarea_count {
         display: block;
         width: 100%;
         height: 100%;
-        color: var(--accent-color);
+        color: #2982C8;
     }
 
     #close {
@@ -1126,37 +1077,17 @@ span.textarea_count {
     }
 
     .menu_wrap li:hover {
-        background-color: var(--accent-color);
+        background-color: #2982C8;
         border-radius: 4px;
     }
 
     .menu_wrap li.on {
-        background-color: var(--accent-color);
+        background-color: #2982C8;
         border-radius: 4px;
     }
 
     .menu_wrap li > a{
-        color: var(--text-dark-color);
-    }
-
-
-
-
-    .youtube_content .youtube_clip {
-         display: block;
-         text-align: center;
-
-         /*margin: 30px;*/
-     }
-
-    .youtube_clip iframe {
-        width: 440px;
-        height: 250px;
-    }
-
-    .youtube_title {
-        color: var(--text-dark-color);
-        margin: 30px;
+        color: #333333;
     }
 
     section {
