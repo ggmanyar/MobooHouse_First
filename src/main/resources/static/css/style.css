@@ -422,7 +422,7 @@ section .contentFrame .introTitle .intro_contents {
     text-align: center;
     font-size: 48px;
     color: lightgrey;
-    font-weight: 900;
+    font-weight: 700;
 }
 section .contentFrame .introTitle .intro_contents .imp {
     font-size: 60px;
@@ -943,9 +943,6 @@ span.textarea_count {
 .pr50 { padding-right: 50px; }
 
 .underline { border-bottom: 1px solid #8c8c8c; }
-
-
-
 
 
 

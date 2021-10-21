@@ -15,7 +15,22 @@ $(document).ready(function(){
     $("footer").css("color", "white");
     $(".navbar_menu li.on:after").css("border-bottom", "solid 5px black");
     $("#logo").attr("src", '/static/images/mobooLogo_White.png');
-    $("body").css("background", "url('/static/images/moboo_Background.jpeg') no-repeat center center/cover, rgba(0, 0, 0, 0.8)");
+    //$("body").css("background", "url('/static/images/moboo_Background.jpeg') no-repeat center center/cover, rgba(0, 0, 0, 0.8)");
+    $("body").css("background", "url('/static/images/moboo_Background.png') no-repeat center center fixed");
+    $("body").css("-webkit-background-size", "cover");
+    $("body").css("-moz-background-size", "cover");
+    $("body").css("-o-background-size", "cover");
+    $("body").css("-background-size", "cover");
+
+    $("body").css("overflow", "hidden");
+
+
+    /*$("body").css("background-image", "url('/static/images/moboo_Background.png')");
+    $("body").css("background-repeat", "no-repeat");
+    $("body").css("background-position", "0 0");
+    $("body").css("background-size", "auto");
+    $("body").css("background-attachment", "scroll");*/
+
     $("body").css("background-blend-mode", "multiply");
     /*background: url('/static/images/moboo_Background.jpeg') no-repeat center center/cover, rgba(0, 0, 0, 0.6);
     background-blend-mode: multiply;*/
