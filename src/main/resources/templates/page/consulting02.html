@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+
+    <th:block layout:fragment="script">
+        <script th:src="@{/static/js/consulting.js}"></script>
+    </th:block>
+
+    <div layout:fragment="content">
+        <section class="section">
+            <div class="contentFrame">
+
+                <div class="titleArea">
+                    <div class="contents_title">상담 예약하기(1/2)</div>
+                    <hr class="split_title">
+                    <div class="contents_title_explain">상담에 필요한 내용을 아래 양식에 맞게 작성해주세요.</div>
+                </div>
+
+                <div class="contentArea">
+                    <div class="consultingContentArea">
+                        <!-- 1. 예약자 정보 -->
+                        <div class="consultingGuideBox">
+                            <img th:src="@{/static/images/consulting_info.png}" style="width:40px; vertical-align:middle;"></img>
+                            <span class="contents_small_title">예약자 정보</span>
+                            <!-- 이름 -->
+                            <div class="form consultingForm">
+                                <input type="text" class="consultingInput" id="rUserName" name="rUserName" autocomplete="off" required />
+                                <label for="rUserName" class="label-name">
+                                    <span class="content-name">이름</span>
+                                </label>
+                            </div>
+                            <!-- 휴대폰 전화번호 -->
+                            <div class="form consultingForm">
+                                <input type="text" class="consultingInput" id="rUserPhone" name="rUserPhone" autocomplete="off" required />
+                                <label for="rUserPhone" class="label-name">
+                                    <span class="content-name">휴대폰 전화번호</span>
+                                </label>
+                            </div>
+                            <!-- 이메일 주소 -->
+                            <div class="form consultingForm">
+                                <input type="text" class="consultingInput" id="rUserEmail" name="rUserEmail" autocomplete="off" required />
+                                <label for="rUserEmail" class="label-name">
+                                    <span class="content-name">이메일 주소</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <hr class="split_line">
+
+                        <div class="consultingGuideBox">
+                            <img th:src="@{/static/images/consulting_rule.png}" style="width:40px; vertical-align:middle;"></img>
+                            <span class="contents_small_title">상담 내용 작성</span>
+
+                            <!-- 내용 -->
+                            <div class="textarea_style">
+                            <textarea class="textarea" id="textarea" name="textarea_description" style="width:95%; height:95%;"
+                                      onkeyup="charCount()" maxlength="2000" minlength="3"
+                                      placeholder="본인의 현재 상황과 상담을 원하는 내용에 대해 간략하게 작성해주세요.&#13;&#10;&#13;&#10;예시) 자산 / 연봉 / 나이 / 가족 구성 / 거주지 / 구매 희망 지역 및 물건 등"></textarea>
+                            </div>
+                            <span class="textarea_count" id="contactTextCount">0/2000</span>
+
+                            <div class="explain">
+                                <div>상담사가 상담하기 전에 미리 검토/파악하는 내용입니다.</div>
+                                <div>상담요청 내용은 상담하고자하는 물건의 정보와 현재 의뢰인의 상황에 대해 핵심만 간결히 작성해주세요.</div>
+                                <div>2000자 이하로 작성 가능합니다.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottomArea">
+                    <button class="normal" onclick="goPrevious(2)">이전</button>
+                    <button class="important" onclick="goNext(2)">다음</button>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</html>

@@ -11,44 +11,32 @@
     <div layout:fragment="content">
         <section class="section">
             <div class="contentFrame">
-                <div class="contact">
-                    <div class="contact_contents_row">
-                        <div class="contact_contents_cell">
-                            <div class="contents_title">문의(1:1)</div>
-                            <hr class="split_title">
-                        </div>
-                    </div>
+                <div class="titleArea">
+                    <div class="contents_title">문의(1:1)</div>
+                    <hr class="split_title">
+                </div>
 
-                    <div class="contact_contents_row">
-                        <div class="contact_contents_cell">
-                            <div class="contents_center">
-                                <!-- 제목 -->
-                                <div class="form">
-                                    <input type="text" id="name" name="name" autocomplete="off" required />
-                                    <label for="name" class="label-name">
-                                        <span class="content-name">제목을 입력하세요.</span>
-                                    </label>
-                                </div>
-                                <!-- 내용 -->
-                                <div class="textarea_style">
-                                    <!--<textarea class="textarea" id="textarea" name="textarea_description" rows="4" cols="80"
-                                    maxlength="100" minlength="3" placeholder="Write your description here..."></textarea> -->
-                                    <textarea class="textarea" id="textarea" name="textarea_description" style="width:95%; height:95%;"
-                                              onkeyup="charCount()" maxlength="2000" minlength="3"
-                                              placeholder="문의하실 내용을 입력하세요.(2000자 이내)"></textarea>
-                                </div>
-                                <span class="textarea_count" id="contactTextCount">0/2000</span>
-                            </div>
+                <div class="contentArea">
+                    <div class="contactContentArea">
+                        <!-- 제목 -->
+                        <div class="form">
+                            <input class="contactInput" type="text" id="name" name="name" autocomplete="off" required />
+                            <label for="name" class="label-name">
+                                <span class="content-name">제목을 입력하세요.</span>
+                            </label>
                         </div>
+                        <!-- 내용 -->
+                        <div class="textarea_style">
+                            <textarea class="textarea" id="textarea" name="textarea_description" style="width:95%; height:95%;"
+                                      onkeyup="charCount()" maxlength="2000" minlength="3"
+                                      placeholder="문의하실 내용을 입력하세요.(2000자 이내)"></textarea>
+                        </div>
+                        <span class="textarea_count" id="contactTextCount">0/2000</span>
                     </div>
+                </div>
 
-                    <div class="consulting_contents_row">
-                        <div class="consulting_contents_cell">
-                            <div class="contents_center pt20">
-                                <button class="important">문의하기</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="bottomArea">
+                    <button class="important" >문의하기</button>
                 </div>
             </div>
         </section>

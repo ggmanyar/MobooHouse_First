@@ -19,12 +19,13 @@ public class HomeController {
 
     @GetMapping("/moveIntroduction")
     public String moveIntroduction(){
+        //return "page/introduction";
         return "page/introduction";
     }
 
     @GetMapping("/moveConsulting")
     public String moveConsulting(){
-        return "page/consulting";
+        return "page/consulting01";
     }
 
     @GetMapping("/moveReview")
@@ -42,8 +43,8 @@ public class HomeController {
         return "page/login";
     }
 
-    @GetMapping("/moveJoin")
+    @GetMapping("/moveJoin01")
     public String moveJoin(){
-        return "page/join";
+        return "page/join01";
     }
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+
+<th:block layout:fragment="script">
+    <script th:src="@{/static/js/join.js}"></script>
+</th:block>
+
+<div layout:fragment="content">
+    <section class="section">
+        <div class="contentFrame">
+            <div class="titleArea">
+                <div class="contents_title">이메일 회원가입</div>
+                <hr class="split_title">
+            </div>
+
+            <div class="contentArea">
+                <div class="step">
+                    <div class="base on">1단계</div>
+                    <div class="base">2단계</div>
+                    <div class="base">3단계</div>
+                </div>
+
+                <hr class="split_line">
+
+                <div class="joinContentArea">
+                    <div class="centerText">모두의부동산 상담 서비스 이용을 위해 이용약관에 동의해주세요.</div>
+                    <div class="joinAgreement">
+                        <div class="joinAgreementBox">
+                            <input type="checkbox" id="all_check" />
+                            <label for="all_check"> <span></span> 전체 동의합니다.</label>
+                        </div>
+                        <div class="joinAgreementBox">
+                            <div class="row">
+                                <input type="checkbox" id="first_check" />
+                                <label for="first_check"> <span></span> 만 14세 이상입니다.</label>
+                                <span>(필수)</span>
+                            </div>
+                            <div class="row">
+                                <input type="checkbox" id="second_check" />
+                                <label for="second_check"> <span></span> <u>이용약관</u> 동의합니다.</label>
+                                <span>(필수)</span>
+                            </div>
+                            <div class="row">
+                                <input type="checkbox" id="third_check" />
+                                <label for="third_check"> <span></span> <u>개인정보 취급방침</u> 동의합니다.</label>
+                                <span>(필수)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottomArea">
+                <button class="important" onclick="goNext(1)">다음</button>
+            </div>
+        </div>
+    </section>
+</div>
+</html>

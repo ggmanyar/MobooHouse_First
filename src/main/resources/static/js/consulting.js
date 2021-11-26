@@ -2,6 +2,11 @@ $(document).ready(function(){
     gnb2_On();
     side2_On();
 
+    // 닫기
+    $(".popCloseBtn").click(function (){
+        $("#popup_layer").css("display", "none");
+    });
+
     $(".menu_wrap li").hover(function (){
         side2_Off();
     }, function (){
@@ -94,4 +99,50 @@ function side2_On() {
 
 function side2_Off() {
     $("#side_menu2").attr("class", "");
+}
+
+// 상담예약하기
+function goReservation() {
+    $("#popup_layer").css("display", "inline");
+}
+
+// 회원 로그인
+function goMemberLogin() {
+    window.location.href = "/moveLogin";
+}
+
+// 비회원 로그인
+function goNonMemberLogin() {
+    //alert("비회원 상담신청 페이지는 준비중입니다.");
+    window.location.href = "/moveConsulting02";
+}
+
+// 회원가입
+function goJoin() {
+    window.location.href = "/moveJoin01";
+}
+
+function goPrevious(step) {
+    if(step == 2){
+        // 이전 버튼
+        window.location.href = "/moveConsulting";
+    }else if(step == 3){
+        // 이전 버튼
+        window.location.href = "/moveConsulting02";
+    }
+}
+
+function goNext(step) {
+    if(step == 1){
+        // 상담 예약하기 버튼
+        window.location.href = "/moveConsulting02"
+    }else if(step == 2){
+        // 다음 버튼
+        window.location.href = "/moveConsulting03"
+    }else if(step == 3){
+        // 예약신청 완료 버튼
+        $("#popup_layer").css("display", "inline");
+    }else{
+        console.log("존재하지 않는 STEP");
+    }
 }

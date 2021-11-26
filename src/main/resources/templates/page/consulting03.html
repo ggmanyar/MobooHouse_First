@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+
+    <th:block layout:fragment="script">
+        <script th:src="@{/static/js/consulting.js}"></script>
+    </th:block>
+
+    <div layout:fragment="content">
+        <section class="section">
+            <div class="contentFrame">
+
+                <div class="titleArea">
+                    <div class="contents_title">상담 예약하기(2/2)</div>
+                    <hr class="split_title">
+                    <div class="contents_title_explain">아래 내용을 확인 후 예약을 완료해주세요.</div>
+                </div>
+
+                <div class="contentArea">
+                    <div class="consultingContentArea">
+                        <!-- 1. 예약자 정보 -->
+                        <div class="consultingGuideBox nonSpace">
+                            <img th:src="@{/static/images/consulting_type.png}" style="width:40px; vertical-align:middle;"></img>
+                            <span class="contents_small_title">예약 내용 정리</span>
+
+                            <div class="reservationInfo">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:30%">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <thead></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1. 상담 종류</td>
+                                            <td>전화상담 / 부동산 상담(종합)</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td>2. 상담 희망 일시</td>
+                                            <td>2021년 5월 11일(화) 오후 8시 (1시간 예정)</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td>3. 상담자 정보</td>
+                                            <td>김정태 대표(모두의부동산)</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td>4. 예약자 정보</td>
+                                            <td>홍길동 / 010-1234-5678 / honggildong@gmail.com</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">5. 상담 내용</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="content">
+                                    나이 40세(결혼, 자녀 1명)<br>
+                                    연소득 : 1억 2천만원<br>
+                                    자산 : 총 5억 3천만원(현금 3억 / 주식 2억 3천만원 / 대출 없음)<br>
+                                    매입을 고려중인 지역 : 수원, 화성<br><br>
+                                    직장이 수원에 있어서 수원 또는 화성 쪽에 아파트를 알아보고 있습니다.<br>
+                                    신축 아파트가 너무 비싸서 재건축 또는 재개발 아파트에서 몸테크할 생각도 있습니다.<br>
+                                    (사업성 좋은 재건축 아파트가 어딘지 궁금합니다.)<br>
+                                    매매시 주담대는 최대한 받을 생각입니다.<br><br>
+                                    좋은 상담 기대하겠습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottomArea">
+                    <button class="normal" onclick="goPrevious(3)">이전</button>
+                    <button class="important" onclick="goNext(3)">예약신청 완료</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="popup_layer" style="display:none;">
+            <div class="popBox loginPop wide">
+                <div class="popClose">
+                    <img th:src="@{/static/images/btnClose.png}" class="popCloseBtn"></img>
+                </div>
+                <div class="popCont">
+                    <div class="row">
+                        <img th:src="@{/static/images/mobooLogo_Black.png}" class="logo"></img>
+                    </div>
+                    <div class="row">
+                        <div class="textSet mt30">
+                            <div class="bigText noMg">예약 신청이 완료되었습니다.(<span class="link">마이페이지</span> 에서 확인 가능)</div>
+                            <div class="bigText noMg">담당 직원이 예약 일정을 확인하여 안내 메시지를 보내드리겠습니다.</div>
+                            <div class="bigText noMg">받으신 계좌번호로 입금하시면 예약이 최종적으로 완료됩니다.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="textSet">
+                            <div class="mediumText">* 메시지는 카카오톡으로 발송됩니다.(발송 불가시 SMS로 발송)</div>
+                        </div>
+                    </div>
+                    <div class="row mt30 mb30">
+                        <button class="important" onclick="goNext(3)">상담예약현황 보러가기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>

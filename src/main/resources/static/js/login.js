@@ -32,3 +32,8 @@ function side5_On() {
 function side5_Off() {
     $("#side_menu5").attr("class", "");
 }
+
+// 회원가입
+function goJoin() {
+    window.location.href = "/moveJoin01";
+}

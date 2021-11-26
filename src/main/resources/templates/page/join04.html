@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+
+<th:block layout:fragment="script">
+    <script th:src="@{/static/js/join.js}"></script>
+</th:block>
+
+<div layout:fragment="content">
+    <section class="section">
+        <div class="contentFrame">
+            <div class="titleArea">
+                <div class="contents_title">이메일 회원가입</div>
+                <hr class="split_title">
+            </div>
+
+            <div class="contentArea">
+                <div class="joinContentArea">
+
+                    <div class="joinComplete">
+                        <div class="bigFont">
+                            <span class="important">회원가입</span>이 완료되었습니다.
+                        </div>
+                        <div class="smallFont">
+                            고객님 모두의부동산 회원가입이 완료되었습니다.<p></p>
+                            상담신청 중이셨다면 아래 <span class="important">'이어서 상담신청'</span> 버튼을 클릭해주세요.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottomArea">
+                <button class="normal" onclick="goLogin()">로그인 하기</button>
+                <button class="important" onclick="goConsulting()">이어서 상담신청</button>
+            </div>
+        </div>
+    </section>
+</div>
+</html>

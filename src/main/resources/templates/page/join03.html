@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+
+<th:block layout:fragment="script">
+    <script th:src="@{/static/js/join.js}"></script>
+</th:block>
+
+<div layout:fragment="content">
+    <section class="section">
+        <div class="contentFrame">
+            <div class="titleArea">
+                <div class="contents_title">이메일 회원가입</div>
+                <hr class="split_title">
+            </div>
+
+            <div class="contentArea">
+                <div class="step">
+                    <div class="base">1단계</div>
+                    <div class="base">2단계</div>
+                    <div class="base on">3단계</div>
+                </div>
+
+                <hr class="split_line">
+
+                <div class="joinContentArea">
+                    <div class="centerText spd">모두의부동산 계정으로 사용하실 회원정보를 입력해주세요.</div>
+                    <div class="joinRegistration">
+                        <!-- 이메일 주소 입력 -->
+                        <div class="row">
+                            <div class="form joinForm registration">
+                                <input type="text" class="joinInput" id="usrEmailAdr" name="usrEmailAdr" autocomplete="off" required />
+                                <label for="usrEmailAdr" class="label-name">
+                                    <span class="content-name">이메일 주소</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- 비밀번호 입력 -->
+                        <div class="row">
+                            <div class="form joinForm registration">
+                                <input type="password" class="joinInput" id="usrPwd" name="usrPwd" autocomplete="off" required />
+                                <label for="usrPwd" class="label-name">
+                                    <span class="content-name">비밀번호</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- 비밀번호 확인 입력 -->
+                        <div class="row">
+                            <div class="form joinForm registration">
+                                <input type="password" class="joinInput" id="usrPwdConfirm" name="usrPwdConfirm" autocomplete="off" required />
+                                <label for="usrPwdConfirm" class="label-name">
+                                    <span class="content-name">비밀번호 확인</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- 이름 입력 -->
+                        <div class="row">
+                            <div class="form joinForm registration">
+                                <input type="text" class="joinInput" id="usrNm" name="usrNm" autocomplete="off" required />
+                                <label for="usrNm" class="label-name">
+                                    <span class="content-name">이름</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottomArea">
+                <button class="normal" onclick="goPrevious(3)">이전</button>
+                <button class="important" onclick="goNext(3)">다음</button>
+            </div>
+        </div>
+    </section>
+</div>
+</html>
