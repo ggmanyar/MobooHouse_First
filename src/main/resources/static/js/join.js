@@ -1,5 +1,16 @@
 $(document).ready(function(){
-    //join_next01
+    // 전체 동의
+    $("#all_check").click(function (){
+       if($("#all_check").is(":checked")){
+           $("#first_check").prop("checked", true);
+           $("#second_check").prop("checked", true);
+           $("#third_check").prop("checked", true);
+       }else{
+           $("#first_check").prop("checked", false);
+           $("#second_check").prop("checked", false);
+           $("#third_check").prop("checked", false);
+       }
+    });
 });
 
 function goPrevious(step) {
