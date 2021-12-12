@@ -2,11 +2,6 @@ server:
   port: 8084
 
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://13.124.121.132:3306/opentutorials?serverTimeZone=UTC&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false
-    username: root
-    password: 1q2w3e4r
   thymeleaf:
     prefix: classpath:templates/
     suffix: .html
@@ -14,5 +9,3 @@ spring:
     cache: false
   mvc:
     static-path-pattern: "/static/**"
-mybatis:
-  mapper-locations: classpath:mapper/**.xml
