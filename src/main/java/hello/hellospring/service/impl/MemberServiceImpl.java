@@ -1,27 +1,24 @@
 package hello.hellospring.service.impl;
 
 import hello.hellospring.domain.Member;
-import hello.hellospring.repository.MemberMapper;
 import hello.hellospring.service.MemberService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @Transactional
 @Service
-public class MemberServiceImpl implements MemberService {
+public class MemberServiceImpl implements MemberService{
 
-    private final MemberMapper memberMapper;
+    //private final MemberMapper memberMapper;
 
-    @Autowired
+   /* @Autowired
     public MemberServiceImpl(MemberMapper memberMapper) {
         this.memberMapper = memberMapper;
-    }
+    }*/
 
     /**
      * 회원 가입
@@ -38,11 +35,11 @@ public class MemberServiceImpl implements MemberService {
             System.out.println("회원명 중복");
         }else{
             // 회원가입 DB 저장
-            if(memberMapper.save(member) != 1){
+           /* if(memberMapper.save(member) != 1){
                 result = "fail";
                 rtnMsg = "데이터를 저장하는 중 오류가 발생했습니다.";
                 System.out.println("DB insert 오류");
-            }
+            }*/
         }
 
         resultMap.put("result", result);
@@ -55,7 +52,8 @@ public class MemberServiceImpl implements MemberService {
      * 중복 회원 검증
      */
     public boolean validateDuplicateMember(Member member) {
-        Member m = memberMapper.findByName(member.getName());
+        //memberMapper.findByName(member.getName());
+        Member m =null;
         boolean result = false;
         if(m != null){
             result = true;
@@ -69,17 +67,27 @@ public class MemberServiceImpl implements MemberService {
         System.out.println("GGMANYAR : " + m.getName());*/
     }
 
+    @Override
+    public List<Member> findMembers() {
+        return null;
+    }
+
+    @Override
+    public Member findOne(Long memberId) {
+        return null;
+    }
+
     /**
      * 전체 회원 조회
      */
-    public List<Member> findMembers() {
-        return memberMapper.findAll();
-    }
+    /*public List<Member> findMembers() {
+        //return memberMapper.findAll();
+    }*/
 
     /**
      * 입력 회원 조회
      */
-    public Member findOne(Long memberId){
+    /*public Member findOne(Long memberId){
         return memberMapper.findById(memberId);
-    }
+    }*/
 }
