@@ -19,6 +19,12 @@ pw:[1q2w3e4r%%]
   mybatis:
     mapper-locations: classpath:mapper/**.xml
 
+[20211213_AWS_Mysql_접근_성공_datasurce] 포트번호뒤 test(데이터베이스명) 향후 테스트 완료시 데이터베이스명 변경
+    url: jdbc:mysql://13.124.121.132:3306/test?serverTimeZone=UTC&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false
+    username: ggmanyar
+    password: 1q2w3e4r%%
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
 [AWS 접속정보]
 주소:[https://console.aws.amazon.com/?nc2=h_m_mc]
 ->루트사용자
