@@ -4,8 +4,8 @@ https://github.com/ggmanyar/MobooHouse_First.git
 [모부 도메인 접속정보 port 8084]
 ec2-13-124-121-132.ap-northeast-2.compute.amazonaws.com
 
-[DB 접속정보] - MySql
-ip:[18.219.73.7]
+[DB 접속정보_MySql_20211213_확인_aws_서울] - 이전IP정보[18.219.73.7<-미국꺼인듯]
+ip:[13.124.121.132]
 port:[3306]
 id:[ggmanyar]
 pw:[1q2w3e4r%%]
