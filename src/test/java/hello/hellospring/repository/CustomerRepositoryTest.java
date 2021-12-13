@@ -1,7 +1,6 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Customer;
-import hello.hellospring.repository.CustomerRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDateTime;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -25,6 +26,7 @@ public class CustomerRepositoryTest {
         //given
         Customer customer = new Customer();
         customer.setUsername("김웅태");
+        customer.setLocalDateTime(LocalDateTime.now());
 
         //when
         Long saveId = customerRepository.save(customer);
