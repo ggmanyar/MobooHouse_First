@@ -25,15 +25,13 @@ public class CustomerRepositoryTest {
     public void testCustomer() throws Exception{
         //given
         Customer customer = new Customer();
-        customer.setUsername("김웅태");
-        customer.setLocalDateTime(LocalDateTime.now());
+        customer.setName("김웅태1");
 
         //when
         Long saveId = customerRepository.save(customer);
         Customer findCustomer = customerRepository.find(saveId);
         //then
         Assertions.assertThat(findCustomer.getId()).isEqualTo(saveId);
-        Assertions.assertThat(findCustomer.getUsername()).isEqualTo(customer.getUsername());
 
 
     }
