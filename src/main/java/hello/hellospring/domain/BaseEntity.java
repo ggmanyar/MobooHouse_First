@@ -18,7 +18,7 @@ public abstract class BaseEntity {
 
     //생성일시
     @CreatedDate
-    @Column(name = "created_date")
+    @Column(name = "created_date",updatable = false)
     private LocalDateTime createdDate;
 
     //수정일시
