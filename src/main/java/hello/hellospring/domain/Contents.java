@@ -19,7 +19,7 @@ public class Contents {
     //내용
     private String content;
 
-    public Contents() {
+    protected Contents() {
     }
 
     public Contents(String tile, String content) {
