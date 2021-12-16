@@ -1,11 +1,12 @@
 package hello.hellospring.domain;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Getter
+@Getter @Setter
 public class Question extends BaseEntity{
 
     @Id @GeneratedValue
@@ -20,5 +21,12 @@ public class Question extends BaseEntity{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id")
     private Customer customer;
+    
+    //양방향 연관관계 매서드
+    public void writeCustomer(Customer customer){
+        this.customer = customer;
+        customer.getQuestionList().add(this);
+    }
+
 
 }

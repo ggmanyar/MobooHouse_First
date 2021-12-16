@@ -21,10 +21,4 @@ public class ConsultingReview extends BaseEntity{
     //제목, 내용
     @Embedded
     private Contents contents;
-
-    //상담예약테이블
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "consulting_reserve_id")
-    private ConsultingReserve consultingReserve;
-
 }
