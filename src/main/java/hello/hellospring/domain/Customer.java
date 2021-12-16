@@ -1,12 +1,12 @@
 package hello.hellospring.domain;
 
+import hello.hellospring.domain.reserve.ConsultingReserve;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *고객정보 (예약자) , 핸드폰번호 인증으로 인증된 고객
@@ -29,5 +29,13 @@ public class Customer extends BaseEntity{
 
     //이메일
     private String email;
+    
+    //상담예약목록
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
+    private List<ConsultingReserve> consultingReserveList =new ArrayList<>();
+
+    //문의목록
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
+    private List<Question> questionList = new ArrayList<>();
 
 }
