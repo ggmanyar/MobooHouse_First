@@ -24,7 +24,7 @@ public class Customer extends BaseEntity{
     private String name;
 
     //인증된 핸드폰 번호
-    @Column(length=11)
+    @Column(length=11,unique = true)
     private String phoneNo;
 
     //이메일
