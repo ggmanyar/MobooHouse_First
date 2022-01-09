@@ -17,7 +17,7 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
 
     /**
-     * 회원가입
+     * 고객가입
      * @param customer
      * @return
      */
@@ -51,5 +51,32 @@ public class CustomerService {
         }
 
     }
+
+    /**
+     * 고객전체조회
+     * @return
+     */
+    public List<Customer> findCustomers(){
+        return customerRepository.findAll();
+    }
+
+    /**
+     * 고객아이디로 조회
+     * @param customerId
+     * @return
+     */
+    public Customer findOne(Long customerId){
+        return customerRepository.findOne(customerId);
+    }
+
+    /**
+     * 고객 전화번호로 조회
+     * @param customerPhoneNo
+     * @return
+     */
+    public List<Customer> findByPhoneNo(String customerPhoneNo){
+        return customerRepository.findByPhoneNo(customerPhoneNo);
+    }
+    
 
 }
