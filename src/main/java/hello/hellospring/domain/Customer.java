@@ -54,9 +54,9 @@ public class Customer extends BaseEntity{
      * @param customer
      */
     public void updateCustomer(Customer customer){
-        this.setName(customer.getName());
-        this.setPhoneNo(customer.getPhoneNo());
-        this.setEmail(customer.getEmail());
+        this.name = customer.getName();
+        this.phoneNo = customer.getPhoneNo();
+        this.email = customer.getEmail();
     }
 
 
