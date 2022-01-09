@@ -5,6 +5,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+/**
+ * 문의테이블
+ */
 @Entity
 @Getter @Setter
 public class Question extends BaseEntity{
