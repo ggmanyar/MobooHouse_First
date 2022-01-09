@@ -1,16 +1,17 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Question;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Repository
+@RequiredArgsConstructor
 public class QuestionRepository {
 
-    @PersistenceContext
-    private EntityManager em;
+    private final EntityManager em;
 
     public Long save(Question question){
         em.persist(question);
