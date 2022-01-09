@@ -40,7 +40,6 @@ public class Customer extends BaseEntity{
     private List<Question> questionList = new ArrayList<>();
 
     //==비즈니스 로직==//
-
     /**
      * 폰번호 비어있지않으면 010-1111-2222 > 01011112222(Length=11)로변경
      */
@@ -48,6 +47,16 @@ public class Customer extends BaseEntity{
         if(StringUtils.hasLength(this.phoneNo)){
             this.phoneNo = this.phoneNo.replace("-","");
         }
+    }
+
+    /**
+     * 폰번호가 존재하면 덮어쓰기(Update)
+     * @param customer
+     */
+    public void updateCustomer(Customer customer){
+        this.setName(customer.getName());
+        this.setPhoneNo(customer.getPhoneNo());
+        this.setEmail(customer.getEmail());
     }
 
 
